@@ -1,0 +1,2135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kallol Chakrabarti — Pioneer of Framework Science | 255 DOIs | National Innovation Asset</title>
+    <meta name="description" content="Kallol Chakrabarti: Creator of 255+ DOI-registered frameworks, the Helix Wave Framework, World's Largest Independent Digital Encyclopedia, and Pioneer Frameworks. A singular intellectual force reshaping India's knowledge landscape.">
+    <meta name="keywords" content="Kallol Chakrabarti, Helix Wave Framework, Pioneer Frameworks, DOI, Digital Encyclopedia, Framework Science, Indian Innovation, Ready Reckoner Lab">
+    <meta name="author" content="Kallol Chakrabarti">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Kallol Chakrabarti — 255 DOIs | Pioneer of Framework Science">
+    <meta property="og:description" content="The single largest individual contributor to structured knowledge frameworks in Indian academic history.">
+    <meta property="og:type" content="website">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧬</text></svg>">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+        :root {
+            --gold: #D4AF37;
+            --gold-light: #F4E4A0;
+            --gold-dark: #B8960C;
+            --navy: #0A1628;
+            --navy-light: #132040;
+            --navy-mid: #1A2D50;
+            --white: #FFFFFF;
+            --off-white: #F8F6F0;
+            --saffron: #FF9933;
+            --green-india: #138808;
+            --blue-ashoka: #000080;
+            --crimson: #DC143C;
+            --accent-cyan: #00D4FF;
+            --accent-emerald: #00C897;
+            --text-primary: #E8E6E0;
+            --text-secondary: #A0A8B8;
+            --glass: rgba(255, 255, 255, 0.05);
+            --glass-border: rgba(255, 255, 255, 0.1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            overflow-x: hidden;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--navy);
+            color: var(--text-primary);
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+
+        /* ============ PRELOADER ============ */
+        .preloader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--navy);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 99999;
+            transition: opacity 0.8s ease, visibility 0.8s ease;
+        }
+
+        .preloader.hidden {
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        .preloader-content {
+            text-align: center;
+        }
+
+        .preloader-helix {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 20px;
+            position: relative;
+            animation: helixSpin 2s linear infinite;
+        }
+
+        .preloader-helix::before,
+        .preloader-helix::after {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            animation: helixOrbit 1s ease-in-out infinite;
+        }
+
+        .preloader-helix::before {
+            background: var(--gold);
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .preloader-helix::after {
+            background: var(--accent-cyan);
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            animation-delay: 0.5s;
+        }
+
+        @keyframes helixSpin {
+            100% { transform: rotate(360deg); }
+        }
+
+        @keyframes helixOrbit {
+            0%, 100% { transform: translateX(-50%) scale(1); }
+            50% { transform: translateX(-50%) scale(1.5); }
+        }
+
+        .preloader-text {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.2rem;
+            color: var(--gold);
+            letter-spacing: 4px;
+            text-transform: uppercase;
+        }
+
+        /* ============ PARTICLES BACKGROUND ============ */
+        .particles-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        .particle {
+            position: absolute;
+            width: 2px;
+            height: 2px;
+            background: var(--gold);
+            border-radius: 50%;
+            opacity: 0.3;
+            animation: particleFloat linear infinite;
+        }
+
+        @keyframes particleFloat {
+            0% { transform: translateY(100vh) rotate(0deg); opacity: 0; }
+            10% { opacity: 0.3; }
+            90% { opacity: 0.3; }
+            100% { transform: translateY(-10vh) rotate(720deg); opacity: 0; }
+        }
+
+        /* ============ NAVIGATION ============ */
+        .nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            padding: 15px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: all 0.4s ease;
+            background: transparent;
+        }
+
+        .nav.scrolled {
+            background: rgba(10, 22, 40, 0.95);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--glass-border);
+            padding: 10px 40px;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .nav-brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+        }
+
+        .nav-brand-icon {
+            width: 42px;
+            height: 42px;
+            background: linear-gradient(135deg, var(--gold), var(--gold-dark));
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.3rem;
+            font-weight: 900;
+            color: var(--navy);
+            font-family: 'Playfair Display', serif;
+        }
+
+        .nav-brand-text {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.1rem;
+            color: var(--gold);
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: 500;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--gold);
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--gold);
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .nav-cta {
+            background: linear-gradient(135deg, var(--gold), var(--gold-dark));
+            color: var(--navy) !important;
+            padding: 8px 20px;
+            border-radius: 6px;
+            font-weight: 700 !important;
+            letter-spacing: 1px !important;
+        }
+
+        .nav-cta::after {
+            display: none !important;
+        }
+
+        .mobile-toggle {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            z-index: 1001;
+        }
+
+        .mobile-toggle span {
+            width: 25px;
+            height: 2px;
+            background: var(--gold);
+            transition: all 0.3s ease;
+        }
+
+        /* ============ HERO SECTION ============ */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+            padding: 120px 40px 80px;
+        }
+
+        .hero-bg-pattern {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                radial-gradient(ellipse at 20% 50%, rgba(212, 175, 55, 0.08) 0%, transparent 50%),
+                radial-gradient(ellipse at 80% 20%, rgba(0, 212, 255, 0.05) 0%, transparent 50%),
+                radial-gradient(ellipse at 50% 80%, rgba(0, 200, 151, 0.05) 0%, transparent 50%);
+            z-index: 1;
+        }
+
+        .hero-grid-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                linear-gradient(rgba(212, 175, 55, 0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(212, 175, 55, 0.03) 1px, transparent 1px);
+            background-size: 60px 60px;
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            max-width: 1100px;
+        }
+
+        .hero-flag-bar {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0;
+            margin-bottom: 40px;
+            height: 4px;
+            max-width: 200px;
+            margin-left: auto;
+            margin-right: auto;
+            border-radius: 2px;
+            overflow: hidden;
+        }
+
+        .hero-flag-bar span {
+            flex: 1;
+            height: 100%;
+        }
+
+        .hero-flag-bar span:nth-child(1) { background: var(--saffron); }
+        .hero-flag-bar span:nth-child(2) { background: var(--white); }
+        .hero-flag-bar span:nth-child(3) { background: var(--green-india); }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: rgba(212, 175, 55, 0.1);
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            padding: 8px 24px;
+            border-radius: 50px;
+            margin-bottom: 30px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--gold);
+        }
+
+        .hero-badge .pulse-dot {
+            width: 8px;
+            height: 8px;
+            background: var(--accent-emerald);
+            border-radius: 50%;
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.5; transform: scale(1.5); }
+        }
+
+        .hero-name {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2.8rem, 6vw, 5.5rem);
+            font-weight: 900;
+            line-height: 1.1;
+            margin-bottom: 20px;
+            background: linear-gradient(135deg, var(--gold-light), var(--gold), var(--gold-dark));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero-tagline {
+            font-size: clamp(1rem, 2vw, 1.4rem);
+            color: var(--text-secondary);
+            margin-bottom: 15px;
+            font-weight: 300;
+            letter-spacing: 1px;
+        }
+
+        .hero-tagline strong {
+            color: var(--white);
+            font-weight: 600;
+        }
+
+        .hero-subtitle {
+            font-size: clamp(0.9rem, 1.5vw, 1.1rem);
+            color: var(--accent-cyan);
+            margin-bottom: 50px;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+        }
+
+        /* DOI Counter */
+        .doi-counter-section {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+            margin-bottom: 50px;
+        }
+
+        .doi-counter-card {
+            background: var(--glass);
+            border: 1px solid var(--glass-border);
+            border-radius: 16px;
+            padding: 30px 40px;
+            text-align: center;
+            min-width: 180px;
+            backdrop-filter: blur(10px);
+            transition: all 0.4s ease;
+        }
+
+        .doi-counter-card:hover {
+            border-color: var(--gold);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 40px rgba(212, 175, 55, 0.1);
+        }
+
+        .doi-counter-card.primary {
+            background: linear-gradient(135deg, rgba(212, 175, 55, 0.15), rgba(212, 175, 55, 0.05));
+            border-color: rgba(212, 175, 55, 0.4);
+        }
+
+        .doi-number {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            font-weight: 900;
+            color: var(--gold);
+            line-height: 1;
+            margin-bottom: 8px;
+        }
+
+        .doi-counter-card.primary .doi-number {
+            font-size: 3.5rem;
+            background: linear-gradient(135deg, var(--gold-light), var(--gold));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .doi-label {
+            font-size: 0.75rem;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: 600;
+        }
+
+        .hero-actions {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 14px 32px;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-decoration: none;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: none;
+        }
+
+        .btn-gold {
+            background: linear-gradient(135deg, var(--gold), var(--gold-dark));
+            color: var(--navy);
+            box-shadow: 0 4px 20px rgba(212, 175, 55, 0.3);
+        }
+
+        .btn-gold:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 30px rgba(212, 175, 55, 0.5);
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: var(--gold);
+            border: 1px solid var(--gold);
+        }
+
+        .btn-outline:hover {
+            background: rgba(212, 175, 55, 0.1);
+            transform: translateY(-2px);
+        }
+
+        .btn-cyan {
+            background: linear-gradient(135deg, var(--accent-cyan), #0099CC);
+            color: var(--navy);
+            box-shadow: 0 4px 20px rgba(0, 212, 255, 0.3);
+        }
+
+        .btn-cyan:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 30px rgba(0, 212, 255, 0.5);
+        }
+
+        /* ============ SCROLL INDICATOR ============ */
+        .scroll-indicator {
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 2;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 8px;
+            animation: scrollBounce 2s ease-in-out infinite;
+        }
+
+        .scroll-indicator span {
+            font-size: 0.65rem;
+            color: var(--text-secondary);
+            letter-spacing: 3px;
+            text-transform: uppercase;
+        }
+
+        .scroll-mouse {
+            width: 24px;
+            height: 38px;
+            border: 2px solid var(--text-secondary);
+            border-radius: 12px;
+            position: relative;
+        }
+
+        .scroll-mouse::after {
+            content: '';
+            position: absolute;
+            top: 8px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 3px;
+            height: 8px;
+            background: var(--gold);
+            border-radius: 2px;
+            animation: scrollDot 2s ease-in-out infinite;
+        }
+
+        @keyframes scrollBounce {
+            0%, 100% { transform: translateX(-50%) translateY(0); }
+            50% { transform: translateX(-50%) translateY(10px); }
+        }
+
+        @keyframes scrollDot {
+            0%, 100% { opacity: 1; top: 8px; }
+            100% { opacity: 0; top: 20px; }
+        }
+
+        /* ============ SECTION STYLES ============ */
+        .section {
+            padding: 100px 40px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 70px;
+        }
+
+        .section-eyebrow {
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .section-eyebrow::before,
+        .section-eyebrow::after {
+            content: '';
+            width: 30px;
+            height: 1px;
+            background: var(--gold);
+        }
+
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2rem, 4vw, 3rem);
+            font-weight: 800;
+            color: var(--white);
+            margin-bottom: 15px;
+        }
+
+        .section-subtitle {
+            font-size: 1rem;
+            color: var(--text-secondary);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* ============ WHY THIS MATTERS — NATIONAL SIGNIFICANCE ============ */
+        .significance {
+            background: linear-gradient(180deg, var(--navy) 0%, var(--navy-light) 50%, var(--navy) 100%);
+        }
+
+        .significance-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+            max-width: 1300px;
+            margin: 0 auto;
+        }
+
+        .sig-card {
+            background: var(--glass);
+            border: 1px solid var(--glass-border);
+            border-radius: 16px;
+            padding: 40px;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.4s ease;
+        }
+
+        .sig-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(90deg, var(--gold), var(--accent-cyan));
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+
+        .sig-card:hover {
+            border-color: rgba(212, 175, 55, 0.3);
+            transform: translateY(-5px);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        }
+
+        .sig-card:hover::before {
+            opacity: 1;
+        }
+
+        .sig-icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+        }
+
+        .sig-icon.gold { background: rgba(212, 175, 55, 0.15); }
+        .sig-icon.cyan { background: rgba(0, 212, 255, 0.15); }
+        .sig-icon.emerald { background: rgba(0, 200, 151, 0.15); }
+        .sig-icon.crimson { background: rgba(220, 20, 60, 0.15); }
+
+        .sig-card h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3rem;
+            color: var(--white);
+            margin-bottom: 12px;
+        }
+
+        .sig-card p {
+            color: var(--text-secondary);
+            font-size: 0.92rem;
+            line-height: 1.7;
+        }
+
+        .sig-card .stat-highlight {
+            display: inline-block;
+            background: rgba(212, 175, 55, 0.1);
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            padding: 2px 10px;
+            border-radius: 4px;
+            color: var(--gold);
+            font-weight: 700;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.85rem;
+        }
+
+        /* ============ ACHIEVEMENTS TIMELINE ============ */
+        .achievements {
+            background: var(--navy);
+        }
+
+        .achievement-megacard {
+            max-width: 1200px;
+            margin: 0 auto 60px;
+            background: linear-gradient(135deg, rgba(212, 175, 55, 0.08), rgba(0, 212, 255, 0.05));
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            border-radius: 24px;
+            padding: 60px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .achievement-megacard::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(212, 175, 55, 0.08) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .achievement-megacard h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            color: var(--gold);
+            margin-bottom: 10px;
+        }
+
+        .achievement-megacard .mega-subtitle {
+            color: var(--text-secondary);
+            font-size: 1rem;
+            margin-bottom: 30px;
+        }
+
+        .achievement-stats-row {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .ach-stat {
+            background: rgba(10, 22, 40, 0.5);
+            border: 1px solid var(--glass-border);
+            border-radius: 12px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .ach-stat-number {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.2rem;
+            font-weight: 900;
+            color: var(--gold);
+            margin-bottom: 5px;
+        }
+
+        .ach-stat-label {
+            font-size: 0.72rem;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: 600;
+        }
+
+        .achievement-description {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            line-height: 1.8;
+            max-width: 900px;
+        }
+
+        .achievement-description strong {
+            color: var(--white);
+        }
+
+        /* Timeline Cards */
+        .timeline {
+            max-width: 900px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 30px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: linear-gradient(180deg, var(--gold), var(--accent-cyan), var(--accent-emerald));
+        }
+
+        .timeline-item {
+            position: relative;
+            padding-left: 80px;
+            margin-bottom: 40px;
+        }
+
+        .timeline-dot {
+            position: absolute;
+            left: 20px;
+            top: 5px;
+            width: 22px;
+            height: 22px;
+            border-radius: 50%;
+            background: var(--navy);
+            border: 3px solid var(--gold);
+            z-index: 2;
+        }
+
+        .timeline-item:nth-child(2) .timeline-dot { border-color: var(--accent-cyan); }
+        .timeline-item:nth-child(3) .timeline-dot { border-color: var(--accent-emerald); }
+        .timeline-item:nth-child(4) .timeline-dot { border-color: var(--saffron); }
+        .timeline-item:nth-child(5) .timeline-dot { border-color: var(--crimson); }
+
+        .timeline-card {
+            background: var(--glass);
+            border: 1px solid var(--glass-border);
+            border-radius: 14px;
+            padding: 30px;
+            transition: all 0.3s ease;
+        }
+
+        .timeline-card:hover {
+            border-color: rgba(212, 175, 55, 0.3);
+            transform: translateX(5px);
+        }
+
+        .timeline-year {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.75rem;
+            color: var(--gold);
+            font-weight: 600;
+            letter-spacing: 2px;
+            margin-bottom: 8px;
+        }
+
+        .timeline-card h4 {
+            font-size: 1.15rem;
+            color: var(--white);
+            margin-bottom: 8px;
+        }
+
+        .timeline-card p {
+            color: var(--text-secondary);
+            font-size: 0.88rem;
+        }
+
+        /* ============ PROJECTS / ECOSYSTEMS ============ */
+        .ecosystems {
+            background: linear-gradient(180deg, var(--navy) 0%, var(--navy-light) 100%);
+        }
+
+        .eco-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            max-width: 1300px;
+            margin: 0 auto;
+        }
+
+        .eco-card {
+            background: var(--glass);
+            border: 1px solid var(--glass-border);
+            border-radius: 20px;
+            overflow: hidden;
+            transition: all 0.4s ease;
+            position: relative;
+        }
+
+        .eco-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+        }
+
+        .eco-card-header {
+            padding: 30px 30px 20px;
+            position: relative;
+        }
+
+        .eco-card-header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0.1;
+        }
+
+        .eco-card.helix .eco-card-header::before {
+            background: linear-gradient(135deg, var(--gold), transparent);
+        }
+
+        .eco-card.pioneer .eco-card-header::before {
+            background: linear-gradient(135deg, var(--accent-cyan), transparent);
+        }
+
+        .eco-card.encyclopedia .eco-card-header::before {
+            background: linear-gradient(135deg, var(--accent-emerald), transparent);
+        }
+
+        .eco-card.reckoner .eco-card-header::before {
+            background: linear-gradient(135deg, var(--saffron), transparent);
+        }
+
+        .eco-tag {
+            display: inline-block;
+            padding: 4px 14px;
+            border-radius: 20px;
+            font-size: 0.68rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+        }
+
+        .eco-card.helix .eco-tag {
+            background: rgba(212, 175, 55, 0.2);
+            color: var(--gold);
+        }
+
+        .eco-card.pioneer .eco-tag {
+            background: rgba(0, 212, 255, 0.2);
+            color: var(--accent-cyan);
+        }
+
+        .eco-card.encyclopedia .eco-tag {
+            background: rgba(0, 200, 151, 0.2);
+            color: var(--accent-emerald);
+        }
+
+        .eco-card.reckoner .eco-tag {
+            background: rgba(255, 153, 51, 0.2);
+            color: var(--saffron);
+        }
+
+        .eco-card h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.4rem;
+            color: var(--white);
+            margin-bottom: 10px;
+            line-height: 1.3;
+        }
+
+        .eco-card-body {
+            padding: 0 30px 30px;
+        }
+
+        .eco-card p {
+            color: var(--text-secondary);
+            font-size: 0.88rem;
+            margin-bottom: 20px;
+            line-height: 1.7;
+        }
+
+        .eco-features {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 20px;
+        }
+
+        .eco-feature {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            padding: 4px 12px;
+            border-radius: 6px;
+            font-size: 0.75rem;
+            color: var(--text-secondary);
+            font-weight: 500;
+        }
+
+        .eco-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--gold);
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            transition: gap 0.3s ease;
+        }
+
+        .eco-link:hover {
+            gap: 14px;
+        }
+
+        /* ============ COMPARISON / CONTEXT ============ */
+        .context {
+            background: var(--navy-light);
+        }
+
+        .context-table-wrapper {
+            max-width: 1000px;
+            margin: 0 auto;
+            overflow-x: auto;
+        }
+
+        .context-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.9rem;
+        }
+
+        .context-table thead th {
+            background: rgba(212, 175, 55, 0.1);
+            color: var(--gold);
+            padding: 16px 20px;
+            text-align: left;
+            font-size: 0.75rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            font-weight: 700;
+            border-bottom: 2px solid rgba(212, 175, 55, 0.3);
+        }
+
+        .context-table tbody td {
+            padding: 16px 20px;
+            border-bottom: 1px solid var(--glass-border);
+            color: var(--text-secondary);
+        }
+
+        .context-table tbody tr:hover {
+            background: rgba(212, 175, 55, 0.03);
+        }
+
+        .context-table tbody tr.highlight {
+            background: rgba(212, 175, 55, 0.08);
+        }
+
+        .context-table tbody tr.highlight td {
+            color: var(--white);
+            font-weight: 600;
+        }
+
+        .context-table tbody tr.highlight td:first-child {
+            color: var(--gold);
+        }
+
+        /* ============ QUOTE / VISION ============ */
+        .vision {
+            background: var(--navy);
+            text-align: center;
+        }
+
+        .vision-quote {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+            padding: 40px;
+        }
+
+        .vision-quote::before {
+            content: '"';
+            font-family: 'Playfair Display', serif;
+            font-size: 8rem;
+            color: rgba(212, 175, 55, 0.15);
+            position: absolute;
+            top: -30px;
+            left: 0;
+            line-height: 1;
+        }
+
+        .vision-quote blockquote {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(1.3rem, 2.5vw, 1.8rem);
+            color: var(--white);
+            font-weight: 700;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            font-style: italic;
+        }
+
+        .vision-quote cite {
+            color: var(--gold);
+            font-style: normal;
+            font-size: 0.9rem;
+            font-weight: 600;
+            letter-spacing: 2px;
+        }
+
+        /* ============ PM BRIEFING SECTION ============ */
+        .pm-briefing {
+            background: linear-gradient(135deg, var(--navy-light), var(--navy-mid));
+            border-top: 1px solid rgba(212, 175, 55, 0.2);
+            border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+        }
+
+        .pm-card {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: linear-gradient(135deg, rgba(212, 175, 55, 0.05), rgba(255, 153, 51, 0.03));
+            border: 1px solid rgba(212, 175, 55, 0.25);
+            border-radius: 24px;
+            padding: 60px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .pm-card::before {
+            content: '🇮🇳';
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            font-size: 3rem;
+            opacity: 0.2;
+        }
+
+        .pm-card h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.6rem;
+            color: var(--gold);
+            margin-bottom: 25px;
+        }
+
+        .pm-points {
+            list-style: none;
+        }
+
+        .pm-points li {
+            position: relative;
+            padding-left: 35px;
+            margin-bottom: 18px;
+            color: var(--text-primary);
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+
+        .pm-points li::before {
+            content: '✦';
+            position: absolute;
+            left: 0;
+            color: var(--gold);
+            font-size: 0.8rem;
+            top: 4px;
+        }
+
+        .pm-points li strong {
+            color: var(--gold);
+        }
+
+        /* ============ FRAMEWORK DOMAINS GRID ============ */
+        .domains {
+            background: var(--navy);
+        }
+
+        .domains-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            gap: 16px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .domain-chip {
+            background: var(--glass);
+            border: 1px solid var(--glass-border);
+            border-radius: 12px;
+            padding: 20px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .domain-chip:hover {
+            border-color: var(--gold);
+            background: rgba(212, 175, 55, 0.05);
+            transform: translateY(-3px);
+        }
+
+        .domain-chip-icon {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+
+        .domain-chip h4 {
+            font-size: 0.85rem;
+            color: var(--white);
+            margin-bottom: 4px;
+        }
+
+        .domain-chip span {
+            font-size: 0.72rem;
+            color: var(--text-secondary);
+            font-family: 'JetBrains Mono', monospace;
+        }
+
+        /* ============ FOOTER ============ */
+        .footer {
+            background: var(--navy);
+            border-top: 1px solid var(--glass-border);
+            padding: 60px 40px 30px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 60px;
+            margin-bottom: 40px;
+        }
+
+        .footer-brand h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3rem;
+            color: var(--gold);
+            margin-bottom: 10px;
+        }
+
+        .footer-brand p {
+            color: var(--text-secondary);
+            font-size: 0.85rem;
+            line-height: 1.7;
+        }
+
+        .footer-links h4 {
+            font-size: 0.75rem;
+            color: var(--gold);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+
+        .footer-links a {
+            display: block;
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.85rem;
+            margin-bottom: 10px;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: var(--gold);
+        }
+
+        .footer-bottom {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding-top: 20px;
+            border-top: 1px solid var(--glass-border);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .footer-bottom p {
+            color: var(--text-secondary);
+            font-size: 0.78rem;
+        }
+
+        .footer-india {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.78rem;
+            color: var(--text-secondary);
+        }
+
+        .footer-india-flag {
+            display: flex;
+            gap: 2px;
+        }
+
+        .footer-india-flag span {
+            width: 12px;
+            height: 8px;
+        }
+
+        .footer-india-flag span:nth-child(1) { background: var(--saffron); border-radius: 2px 0 0 0; }
+        .footer-india-flag span:nth-child(2) { background: var(--white); }
+        .footer-india-flag span:nth-child(3) { background: var(--green-india); border-radius: 0 0 0 2px; }
+
+        /* ============ BACK TO TOP ============ */
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, var(--gold), var(--gold-dark));
+            color: var(--navy);
+            border: none;
+            border-radius: 12px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            z-index: 999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 20px rgba(212, 175, 55, 0.3);
+        }
+
+        .back-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .back-to-top:hover {
+            transform: translateY(-3px);
+        }
+
+        /* ============ ANIMATIONS ============ */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .reveal-delay-1 { transition-delay: 0.1s; }
+        .reveal-delay-2 { transition-delay: 0.2s; }
+        .reveal-delay-3 { transition-delay: 0.3s; }
+        .reveal-delay-4 { transition-delay: 0.4s; }
+
+        /* ============ RESPONSIVE ============ */
+        @media (max-width: 1024px) {
+            .nav { padding: 15px 25px; }
+            .section { padding: 70px 25px; }
+            .achievement-megacard { padding: 40px; }
+            .pm-card { padding: 40px; }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .mobile-toggle { display: flex; }
+            
+            .nav-links.mobile-open {
+                display: flex;
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(10, 22, 40, 0.98);
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                gap: 30px;
+                z-index: 1000;
+            }
+
+            .nav-links.mobile-open a {
+                font-size: 1.1rem;
+            }
+
+            .hero { padding: 120px 20px 80px; }
+            .doi-counter-section { gap: 15px; }
+            .doi-counter-card { min-width: 140px; padding: 20px; }
+            .doi-number { font-size: 2.2rem; }
+            
+            .eco-grid { grid-template-columns: 1fr; }
+            .significance-grid { grid-template-columns: 1fr; }
+            .timeline::before { left: 15px; }
+            .timeline-item { padding-left: 50px; }
+            .timeline-dot { left: 5px; }
+
+            .footer-content { grid-template-columns: 1fr; gap: 30px; }
+            .footer-bottom { flex-direction: column; text-align: center; }
+
+            .context-table { font-size: 0.8rem; }
+        }
+
+        @media (max-width: 480px) {
+            .hero-name { font-size: 2.2rem; }
+            .section { padding: 50px 15px; }
+            .achievement-megacard { padding: 25px; }
+            .pm-card { padding: 25px; }
+            .achievement-stats-row { grid-template-columns: repeat(2, 1fr); }
+            .domains-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+
+        /* ============ PRINT STYLES ============ */
+        @media print {
+            .nav, .particles-container, .preloader, .back-to-top, .scroll-indicator { display: none; }
+            body { background: white; color: #222; }
+            .hero { min-height: auto; padding: 40px; }
+            .hero-name { -webkit-text-fill-color: #B8960C; }
+            .section { padding: 30px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- PRELOADER -->
+    <div class="preloader" id="preloader">
+        <div class="preloader-content">
+            <div class="preloader-helix"></div>
+            <div class="preloader-text">Loading Portfolio</div>
+        </div>
+    </div>
+
+    <!-- PARTICLES -->
+    <div class="particles-container" id="particles"></div>
+
+    <!-- NAVIGATION -->
+    <nav class="nav" id="nav">
+        <a href="#" class="nav-brand">
+            <div class="nav-brand-icon">KC</div>
+            <span class="nav-brand-text">Kallol Chakrabarti</span>
+        </a>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#achievements">Achievements</a></li>
+            <li><a href="#ecosystems">Ecosystems</a></li>
+            <li><a href="#significance">Significance</a></li>
+            <li><a href="#domains">Domains</a></li>
+            <li><a href="#briefing">PM Brief</a></li>
+            <li><a href="https://github.com/helixoriginator" target="_blank" class="nav-cta">GitHub ↗</a></li>
+        </ul>
+        <div class="mobile-toggle" id="mobileToggle">
+            <span></span><span></span><span></span>
+        </div>
+    </nav>
+
+    <!-- ====================== HERO ====================== -->
+    <section class="hero" id="hero">
+        <div class="hero-bg-pattern"></div>
+        <div class="hero-grid-overlay"></div>
+        
+        <div class="hero-content">
+            <div class="hero-flag-bar">
+                <span></span><span></span><span></span>
+            </div>
+
+            <div class="hero-badge">
+                <span class="pulse-dot"></span>
+                Independent Framework Scientist — India
+            </div>
+
+            <h1 class="hero-name">Kallol Chakrabarti</h1>
+            
+            <p class="hero-tagline">
+                Creator of <strong>255 DOI-Registered Frameworks</strong> — The Single Largest Individual 
+                <br>Contribution to Structured Knowledge in Modern Indian Academic History
+            </p>
+            
+            <p class="hero-subtitle">
+                Architect of the Helix Wave Framework · Pioneer Frameworks · World's Largest Independent Digital Encyclopedia · Ready Reckoner Lab
+            </p>
+
+            <!-- DOI Counter Cards -->
+            <div class="doi-counter-section">
+                <div class="doi-counter-card primary">
+                    <div class="doi-number" id="doiCount">0</div>
+                    <div class="doi-label">Total DOIs</div>
+                </div>
+                <div class="doi-counter-card">
+                    <div class="doi-number" id="frameworkCount">0</div>
+                    <div class="doi-label">Frameworks</div>
+                </div>
+                <div class="doi-counter-card">
+                    <div class="doi-number" id="domainCount">0</div>
+                    <div class="doi-label">Domains Covered</div>
+                </div>
+                <div class="doi-counter-card">
+                    <div class="doi-number" id="ecosystemCount">0</div>
+                    <div class="doi-label">Ecosystems Built</div>
+                </div>
+            </div>
+
+            <div class="hero-actions">
+                <a href="#achievements" class="btn btn-gold">Explore Achievements ↓</a>
+                <a href="#briefing" class="btn btn-outline">PM Briefing Note</a>
+                <a href="https://github.com/helixoriginator" target="_blank" class="btn btn-cyan">View on GitHub ↗</a>
+            </div>
+        </div>
+
+        <div class="scroll-indicator">
+            <div class="scroll-mouse"></div>
+            <span>Scroll</span>
+        </div>
+    </section>
+
+    <!-- ====================== ACHIEVEMENTS MEGA SECTION ====================== -->
+    <section class="section achievements" id="achievements">
+        <div class="section-header">
+            <div class="section-eyebrow">A Record Without Parallel</div>
+            <h2 class="section-title">Achievements & Milestones</h2>
+            <p class="section-subtitle">
+                A comprehensive record of intellectual output that stands unmatched 
+                by any independent researcher in India's knowledge economy.
+            </p>
+        </div>
+
+        <!-- Mega Achievement Card -->
+        <div class="achievement-megacard reveal">
+            <h3>📊 The Numbers That Define a Legacy</h3>
+            <p class="mega-subtitle">Every single framework is DOI-registered, peer-verifiable, and permanently archived.</p>
+            
+            <div class="achievement-stats-row">
+                <div class="ach-stat">
+                    <div class="ach-stat-number">255</div>
+                    <div class="ach-stat-label">DOI Registrations</div>
+                </div>
+                <div class="ach-stat">
+                    <div class="ach-stat-number">255+</div>
+                    <div class="ach-stat-label">Original Frameworks</div>
+                </div>
+                <div class="ach-stat">
+                    <div class="ach-stat-number">30+</div>
+                    <div class="ach-stat-label">Knowledge Domains</div>
+                </div>
+                <div class="ach-stat">
+                    <div class="ach-stat-number">4</div>
+                    <div class="ach-stat-label">Major Ecosystems</div>
+                </div>
+                <div class="ach-stat">
+                    <div class="ach-stat-number">1</div>
+                    <div class="ach-stat-label">Independent Author</div>
+                </div>
+                <div class="ach-stat">
+                    <div class="ach-stat-number">∞</div>
+                    <div class="ach-stat-label">Impact Potential</div>
+                </div>
+            </div>
+
+            <p class="achievement-description">
+                <strong>Kallol Chakrabarti</strong> has single-handedly authored <strong>255 DOI-registered frameworks</strong> 
+                spanning AI governance, quantum computing, climate science, education reform, defense strategy, healthcare systems, 
+                urban planning, financial engineering, behavioral science, and dozens more domains. Each framework is a 
+                <strong>complete intellectual architecture</strong> — not a paper, not a blog post, but a structured, 
+                interconnected system of thought designed to solve real-world problems at scale. This body of work constitutes 
+                <strong>the largest individual framework contribution in Indian academic history</strong> and potentially 
+                one of the largest globally by any independent researcher.
+            </p>
+        </div>
+
+        <!-- Timeline -->
+        <div class="timeline">
+            <div class="timeline-item reveal">
+                <div class="timeline-dot"></div>
+                <div class="timeline-card">
+                    <div class="timeline-year">🧬 FOUNDATIONAL BREAKTHROUGH</div>
+                    <h4>Helix Wave Framework — The Origin System</h4>
+                    <p>Created the foundational multi-domain analytical architecture that would spawn an entire ecosystem of frameworks. The Helix Wave methodology introduced spiral-layered thinking to complex system analysis, enabling cross-domain problem decomposition at unprecedented depth.</p>
+                </div>
+            </div>
+
+            <div class="timeline-item reveal reveal-delay-1">
+                <div class="timeline-dot"></div>
+                <div class="timeline-card">
+                    <div class="timeline-year">🏛️ PIONEER FRAMEWORKS INITIATIVE</div>
+                    <h4>255 DOI-Registered Frameworks Achieved</h4>
+                    <p>Systematically authored and registered 255+ original frameworks across 30+ domains, each with a unique DOI — establishing the single largest individual contribution to structured knowledge frameworks in Indian academic history. Every framework is independently verifiable, permanently archived, and globally accessible.</p>
+                </div>
+            </div>
+
+            <div class="timeline-item reveal reveal-delay-2">
+                <div class="timeline-dot"></div>
+                <div class="timeline-card">
+                    <div class="timeline-year">📚 WORLD'S LARGEST INDEPENDENT DIGITAL ENCYCLOPEDIA</div>
+                    <h4>Helix Library — A Knowledge Universe</h4>
+                    <p>Built the World's Largest Independent Digital Encyclopedia — a structured, searchable, interconnected repository of frameworks, methodologies, and knowledge architectures. Unlike traditional encyclopedias, every entry is an original intellectual contribution with DOI provenance.</p>
+                </div>
+            </div>
+
+            <div class="timeline-item reveal reveal-delay-3">
+                <div class="timeline-dot"></div>
+                <div class="timeline-card">
+                    <div class="timeline-year">🔬 READY RECKONER LAB</div>
+                    <h4>Practical Application Engine</h4>
+                    <p>Created the Ready Reckoner Lab — a rapid-access knowledge system that translates complex frameworks into actionable, decision-ready intelligence. Designed for policymakers, researchers, and practitioners who need structured insight without academic overhead.</p>
+                </div>
+            </div>
+
+            <div class="timeline-item reveal reveal-delay-4">
+                <div class="timeline-dot"></div>
+                <div class="timeline-card">
+                    <div class="timeline-year">🌍 GLOBAL RECOGNITION TRAJECTORY</div>
+                    <h4>From Independent Researcher to National Asset</h4>
+                    <p>With 255 DOIs and counting, this body of work positions India at the forefront of a new discipline: <strong>Framework Science</strong>. The work is entirely self-funded, independently executed, and represents a model of individual intellectual entrepreneurship that deserves national recognition and institutional support.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ====================== ECOSYSTEMS ====================== -->
+    <section class="section ecosystems" id="ecosystems">
+        <div class="section-header">
+            <div class="section-eyebrow">Four Pillars of Innovation</div>
+            <h2 class="section-title">The Ecosystem Architecture</h2>
+            <p class="section-subtitle">
+                Four interconnected platforms that together form the most comprehensive 
+                individual knowledge infrastructure ever built in India.
+            </p>
+        </div>
+
+        <div class="eco-grid">
+            <!-- Helix Wave -->
+            <div class="eco-card helix reveal">
+                <div class="eco-card-header">
+                    <span class="eco-tag">Foundation</span>
+                    <h3>🧬 Helix Wave Framework</h3>
+                </div>
+                <div class="eco-card-body">
+                    <p>The foundational multi-domain analytical architecture. Introduces spiral-layered thinking for complex system decomposition. The DNA of all subsequent frameworks — a meta-methodology for generating structured knowledge at scale.</p>
+                    <div class="eco-features">
+                        <span class="eco-feature">Multi-Domain</span>
+                        <span class="eco-feature">Spiral Analysis</span>
+                        <span class="eco-feature">Meta-Framework</span>
+                        <span class="eco-feature">DOI Registered</span>
+                    </div>
+                    <a href="https://helixoriginator.github.io/helix-wave-framework/" target="_blank" class="eco-link">
+                        Explore Framework →
+                    </a>
+                </div>
+            </div>
+
+            <!-- Pioneer Frameworks -->
+            <div class="eco-card pioneer reveal reveal-delay-1">
+                <div class="eco-card-header">
+                    <span class="eco-tag">Core Repository</span>
+                    <h3>🏛️ Pioneer Frameworks</h3>
+                </div>
+                <div class="eco-card-body">
+                    <p>The primary repository of 255 DOI-registered frameworks spanning 30+ domains. Each framework is an original intellectual architecture — from AI governance to climate resilience, defense strategy to educational reform. India's largest individual knowledge contribution.</p>
+                    <div class="eco-features">
+                        <span class="eco-feature">255 DOIs</span>
+                        <span class="eco-feature">30+ Domains</span>
+                        <span class="eco-feature">Original Research</span>
+                        <span class="eco-feature">Peer-Verifiable</span>
+                    </div>
+                    <a href="https://helixoriginator.github.io/Pioneer-Frameworks-Kallol-Chakrabarti/" target="_blank" class="eco-link">
+                        Browse Frameworks →
+                    </a>
+                </div>
+            </div>
+
+            <!-- Encyclopedia -->
+            <div class="eco-card encyclopedia reveal reveal-delay-2">
+                <div class="eco-card-header">
+                    <span class="eco-tag">Knowledge Universe</span>
+                    <h3>📚 World's Largest Independent Digital Encyclopedia</h3>
+                </div>
+                <div class="eco-card-body">
+                    <p>The Helix Library — a structured, searchable, interconnected encyclopedia where every entry is an original DOI-registered contribution. Not a copy of existing knowledge, but a universe of new knowledge architectures. Unprecedented in scale and originality.</p>
+                    <div class="eco-features">
+                        <span class="eco-feature">Searchable</span>
+                        <span class="eco-feature">Interconnected</span>
+                        <span class="eco-feature">Original Content</span>
+                        <span class="eco-feature">DOI Provenance</span>
+                    </div>
+                    <a href="https://helixoriginator.github.io/helix-library/" target="_blank" class="eco-link">
+                        Enter Library →
+                    </a>
+                </div>
+            </div>
+
+            <!-- Ready Reckoner Lab -->
+            <div class="eco-card reckoner reveal reveal-delay-3">
+                <div class="eco-card-header">
+                    <span class="eco-tag">Application Engine</span>
+                    <h3>🔬 Ready Reckoner Lab</h3>
+                </div>
+                <div class="eco-card-body">
+                    <p>The practical intelligence layer — transforming complex frameworks into rapid-access, decision-ready tools. Built for policymakers, corporate strategists, researchers, and educators who need structured insight without the overhead of academic navigation.</p>
+                    <div class="eco-features">
+                        <span class="eco-feature">Rapid Access</span>
+                        <span class="eco-feature">Decision-Ready</span>
+                        <span class="eco-feature">Policy-Grade</span>
+                        <span class="eco-feature">Cross-Domain</span>
+                    </div>
+                    <a href="https://helixoriginator.github.io/ready-reckoner-lab/" target="_blank" class="eco-link">
+                        Access Lab →
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ====================== NATIONAL SIGNIFICANCE ====================== -->
+    <section class="section significance" id="significance">
+        <div class="section-header">
+            <div class="section-eyebrow">Why This Matters</div>
+            <h2 class="section-title">National & Global Significance</h2>
+            <p class="section-subtitle">
+                This work isn't just an academic achievement — it's a strategic national asset 
+                with implications for India's knowledge sovereignty and global intellectual positioning.
+            </p>
+        </div>
+
+        <div class="significance-grid">
+            <div class="sig-card reveal">
+                <div class="sig-icon gold">🏆</div>
+                <h3>Unprecedented Individual Output</h3>
+                <p>No independent researcher in India — and possibly globally — has produced <span class="stat-highlight">255 DOIs</span> as a solo author. This isn't a team effort or institutional output. It's one mind, one vision, one relentless execution.</p>
+            </div>
+
+            <div class="sig-card reveal reveal-delay-1">
+                <div class="sig-icon cyan">🌐</div>
+                <h3>Knowledge Sovereignty</h3>
+                <p>Every framework is permanently registered, globally accessible, and attributable to an Indian researcher. This establishes India's claim in the emerging discipline of Framework Science — a field that Kallol Chakrabarti is effectively founding.</p>
+            </div>
+
+            <div class="sig-card reveal reveal-delay-2">
+                <div class="sig-icon emerald">🏗️</div>
+                <h3>Infrastructure, Not Just Ideas</h3>
+                <p>Unlike traditional papers, these are <strong>knowledge architectures</strong> — reusable, extensible, interconnected systems. They function as intellectual infrastructure that can power policy, education, and innovation for decades.</p>
+            </div>
+
+            <div class="sig-card reveal reveal-delay-3">
+                <div class="sig-icon crimson">🇮🇳</div>
+                <h3>Model for Atmanirbhar Innovation</h3>
+                <p>Entirely self-funded and independently executed, this work embodies the spirit of self-reliant innovation. It demonstrates that world-class intellectual contribution doesn't require institutional backing — just vision, discipline, and courage.</p>
+            </div>
+
+            <div class="sig-card reveal">
+                <div class="sig-icon gold">📐</div>
+                <h3>Cross-Domain Integration</h3>
+                <p>Spanning <span class="stat-highlight">30+ domains</span> — from quantum computing to climate resilience, defense to education — these frameworks aren't siloed. They form an interconnected knowledge web that mirrors the complexity of real-world challenges.</p>
+            </div>
+
+            <div class="sig-card reveal reveal-delay-1">
+                <div class="sig-icon cyan">🔮</div>
+                <h3>Future-Ready Knowledge</h3>
+                <p>These frameworks address emerging challenges — AI governance, space policy, bioethics, digital sovereignty — that governments and institutions are only beginning to confront. India now has a head start, thanks to one researcher's foresight.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ====================== COMPARISON CONTEXT ====================== -->
+    <section class="section context" id="context">
+        <div class="section-header">
+            <div class="section-eyebrow">Contextual Comparison</div>
+            <h2 class="section-title">Putting 255 DOIs in Perspective</h2>
+            <p class="section-subtitle">
+                How does this output compare to typical academic benchmarks?
+            </p>
+        </div>
+
+        <div class="context-table-wrapper">
+            <table class="context-table">
+                <thead>
+                    <tr>
+                        <th>Entity</th>
+                        <th>Type</th>
+                        <th>Typical DOI Output</th>
+                        <th>Timeframe</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Average Indian Professor</td>
+                        <td>Individual</td>
+                        <td>20–50 papers (career)</td>
+                        <td>30+ years</td>
+                    </tr>
+                    <tr>
+                        <td>Top IIT Research Group</td>
+                        <td>Team (10–20)</td>
+                        <td>100–200 papers</td>
+                        <td>10–15 years</td>
+                    </tr>
+                    <tr>
+                        <td>CSIR Lab</td>
+                        <td>Institution</td>
+                        <td>200–500 papers</td>
+                        <td>Annually</td>
+                    </tr>
+                    <tr>
+                        <td>Prolific Global Researcher</td>
+                        <td>Individual</td>
+                        <td>100–300 papers</td>
+                        <td>Career</td>
+                    </tr>
+                    <tr class="highlight">
+                        <td>Kallol Chakrabarti</td>
+                        <td>Solo Independent</td>
+                        <td>255 Frameworks (DOI)</td>
+                        <td>Concentrated Period</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- ====================== VISION QUOTE ====================== -->
+    <section class="section vision">
+        <div class="vision-quote reveal">
+            <blockquote>
+                "I didn't set out to break records. I set out to build systems of thought that could outlive me. 
+                The DOIs are not trophies — they are anchors. Each one ensures that an idea, once born, 
+                can never be erased, co-opted, or forgotten. This is my contribution to India's intellectual permanence."
+            </blockquote>
+            <cite>— Kallol Chakrabarti</cite>
+        </div>
+    </section>
+
+    <!-- ====================== FRAMEWORK DOMAINS ====================== -->
+    <section class="section domains" id="domains">
+        <div class="section-header">
+            <div class="section-eyebrow">30+ Knowledge Domains</div>
+            <h2 class="section-title">Framework Coverage Map</h2>
+            <p class="section-subtitle">
+                Each domain contains multiple original frameworks — 
+                structured, DOI-registered, and ready for application.
+            </p>
+        </div>
+
+        <div class="domains-grid">
+            <div class="domain-chip reveal">
+                <div class="domain-chip-icon">🤖</div>
+                <h4>AI & Machine Learning</h4>
+                <span>Governance, Ethics, Architecture</span>
+            </div>
+            <div class="domain-chip reveal reveal-delay-1">
+                <div class="domain-chip-icon">⚛️</div>
+                <h4>Quantum Computing</h4>
+                <span>Systems, Policy, Applications</span>
+            </div>
+            <div class="domain-chip reveal reveal-delay-2">
+                <div class="domain-chip-icon">🌍</div>
+                <h4>Climate Science</h4>
+                <span>Resilience, Adaptation, Policy</span>
+            </div>
+            <div class="domain-chip reveal reveal-delay-3">
+                <div class="domain-chip-icon">🛡️</div>
+                <h4>Defense & Security</h4>
+                <span>Strategy, Cyber, Intelligence</span>
+            </div>
+            <div class="domain-chip reveal">
+                <div class="domain-chip-icon">🏥</div>
+                <h4>Healthcare Systems</h4>
+                <span>Public Health, Bioethics, Access</span>
+            </div>
+            <div class="domain-chip reveal reveal-delay-1">
+                <div class="domain-chip-icon">🎓</div>
+                <h4>Education Reform</h4>
+                <span>Pedagogy, NEP, Digital Learning</span>
+            </div>
+            <div class="domain-chip reveal reveal-delay-2">
+                <div class="domain-chip-icon">💰</div>
+                <h4>Financial Engineering</h4>
+                <span>Markets, Risk, Digital Currency</span>
+            </div>
+            <div class="domain-chip reveal reveal-delay-3">
+                <div class="domain-chip-icon">🏙️</div>
+                <h4>Urban Planning</h4>
+                <span>Smart Cities, Infrastructure</span>
+            </div>
+            <div class="domain-chip reveal">
+                <div class="domain-chip-icon">🧠</div>
+                <h4>Behavioral Science</h4>
+                <span>Decision-Making, Nudge Theory</span>
+            </div>
+            <div class="domain-chip reveal reveal-delay-1">
+                <div class="domain-chip-icon">🚀</div>
+                <h4>Space Policy</h4>
+                <span>Governance, Commerce, Exploration</span>
+            </div>
+            <div class="domain-chip reveal reveal-delay-2">
+                <div class="domain-chip-icon">⚖️</div>
+                <h4>Legal & Governance</h4>
+                <span>Constitutional, Digital Rights</span>
+            </div>
+            <div class="domain-chip reveal reveal-delay-3">
+                <div class="domain-chip-icon">🌱</div>
+                <h4>Sustainability</h4>
+                <span>ESG, Circular Economy, SDGs</span>
+            </div>
+            <div class="domain-chip reveal">
+                <div class="domain-chip-icon">📡</div>
+                <h4>Telecommunications</h4>
+                <span>5G/6G, Digital Infrastructure</span>
+            </div>
+            <div class="domain-chip reveal reveal-delay-1">
+                <div class="domain-chip-icon">🧬</div>
+                <h4>Biotechnology</h4>
+                <span>Genomics, Bioinformatics</span>
+            </div>
+            <div class="domain-chip reveal reveal-delay-2">
+                <div class="domain-chip-icon">⚡</div>
+                <h4>Energy Systems</h4>
+                <span>Renewable, Grid, Nuclear</span>
+            </div>
+            <div class="domain-chip reveal reveal-delay-3">
+                <div class="domain-chip-icon">🎭</div>
+                <h4>Culture & Heritage</h4>
+                <span>Preservation, Digital Archives</span>
+            </div>
+            <div class="domain-chip reveal">
+                <div class="domain-chip-icon">📊</div>
+                <h4>Data Science</h4>
+                <span>Analytics, Visualization, Ethics</span>
+            </div>
+            <div class="domain-chip reveal reveal-delay-1">
+                <div class="domain-chip-icon">🔐</div>
+                <h4>Cybersecurity</h4>
+                <span>Frameworks, Policy, Infrastructure</span>
+            </div>
+            <div class="domain-chip reveal reveal-delay-2">
+                <div class="domain-chip-icon">🏛️</div>
+                <h4>Public Administration</h4>
+                <span>E-Governance, Reform Models</span>
+            </div>
+            <div class="domain-chip reveal reveal-delay-3">
+                <div class="domain-chip-icon">🌊</div>
+                <h4>Ocean & Maritime</h4>
+                <span>Blue Economy, Naval Strategy</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ====================== PM BRIEFING ====================== -->
+    <section class="section pm-briefing" id="briefing">
+        <div class="section-header">
+            <div class="section-eyebrow">Strategic Briefing</div>
+            <h2 class="section-title">Why This Matters for India</h2>
+            <p class="section-subtitle">
+                A concise briefing on the national significance of this unprecedented intellectual achievement.
+            </p>
+        </div>
+
+        <div class="pm-card reveal">
+            <h3>🇮🇳 Briefing Note: Kallol Chakrabarti — A National Innovation Asset</h3>
+            <ul class="pm-points">
+                <li><strong>255 DOI-registered frameworks</strong> authored by a single independent researcher — the largest such contribution in Indian academic history.</li>
+                <li>Covers <strong>30+ strategic domains</strong> including AI governance, defense strategy, climate resilience, quantum computing, healthcare systems, and education reform.</li>
+                <li>Created the <strong>World's Largest Independent Digital Encyclopedia</strong> — every entry is an original, DOI-registered intellectual contribution.</li>
+                <li>The <strong>Helix Wave Framework</strong> introduces a novel meta-methodology for cross-domain analysis — a foundational contribution to the emerging field of Framework Science.</li>
+                <li>Entirely <strong>self-funded and independently executed</strong> — a model of Atmanirbhar intellectual entrepreneurship.</li>
+                <li>This body of work positions India at the <strong>global forefront of structured knowledge creation</strong> — a strategic advantage in the knowledge economy of the 21st century.</li>
+                <li>The frameworks address <strong>emerging national challenges</strong> (AI policy, digital sovereignty, space governance) that India's institutions are only beginning to formalize.</li>
+                <li><strong>Recommendation:</strong> National recognition, institutional partnership, and strategic integration of these frameworks into India's policy and research infrastructure.</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- ====================== FOOTER ====================== -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h3>Kallol Chakrabarti</h3>
+                <p>Independent Framework Scientist. Creator of 255 DOI-registered frameworks, the Helix Wave Framework, Pioneer Frameworks, the World's Largest Independent Digital Encyclopedia, and the Ready Reckoner Lab. Building India's intellectual infrastructure, one framework at a time.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Ecosystems</h4>
+                <a href="https://helixoriginator.github.io/helix-wave-framework/" target="_blank">Helix Wave Framework</a>
+                <a href="https://helixoriginator.github.io/Pioneer-Frameworks-Kallol-Chakrabarti/" target="_blank">Pioneer Frameworks</a>
+                <a href="https://helixoriginator.github.io/helix-library/" target="_blank">Helix Library</a>
+                <a href="https://helixoriginator.github.io/ready-reckoner-lab/" target="_blank">Ready Reckoner Lab</a>
+            </div>
+            <div class="footer-links">
+                <h4>Connect</h4>
+                <a href="https://github.com/helixoriginator" target="_blank">GitHub</a>
+                <a href="#hero">Back to Top</a>
+                <a href="#achievements">Achievements</a>
+                <a href="#briefing">PM Briefing</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 Kallol Chakrabarti. All frameworks are DOI-registered and independently verifiable.</p>
+            <div class="footer-india">
+                <div class="footer-india-flag">
+                    <span></span><span></span><span></span>
+                </div>
+                Made in India
+            </div>
+        </div>
+    </footer>
+
+    <!-- BACK TO TOP -->
+    <button class="back-to-top" id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+
+    <!-- ====================== JAVASCRIPT ====================== -->
+    <script>
+        // ============ PRELOADER ============
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                document.getElementById('preloader').classList.add('hidden');
+            }, 1500);
+        });
+
+        // ============ PARTICLES ============
+        (function createParticles() {
+            const container = document.getElementById('particles');
+            const count = 50;
+            for (let i = 0; i < count; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'particle';
+                particle.style.left = Math.random() * 100 + '%';
+                particle.style.animationDuration = (Math.random() * 15 + 10) + 's';
+                particle.style.animationDelay = (Math.random() * 10) + 's';
+                particle.style.width = (Math.random() * 3 + 1) + 'px';
+                particle.style.height = particle.style.width;
+                particle.style.opacity = Math.random() * 0.3 + 0.1;
+                container.appendChild(particle);
+            }
+        })();
+
+        // ============ NAVIGATION SCROLL ============
+        const nav = document.getElementById('nav');
+        const backToTop = document.getElementById('backToTop');
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 80) {
+                nav.classList.add('scrolled');
+            } else {
+                nav.classList.remove('scrolled');
+            }
+
+            if (window.scrollY > 400) {
+                backToTop.classList.add('visible');
+            } else {
+                backToTop.classList.remove('visible');
+            }
+        });
+
+        // ============ MOBILE TOGGLE ============
+        const mobileToggle = document.getElementById('mobileToggle');
+        const navLinks = document.getElementById('navLinks');
+
+        mobileToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('mobile-open');
+        });
+
+        // Close mobile menu on link click
+        navLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('mobile-open');
+            });
+        });
+
+        // ============ COUNTER ANIMATION ============
+        function animateCounter(elementId, target, duration) {
+            const element = document.getElementById(elementId);
+            if (!element) return;
+            const startTime = performance.now();
+
+            function update(currentTime) {
+                const elapsed = currentTime - startTime;
+                const progress = Math.min(elapsed / duration, 1);
+                const eased = 1 - Math.pow(1 - progress, 3); // ease-out cubic
+                const current = Math.floor(eased * target);
+
+                if (elementId === 'doiCount' || elementId === 'frameworkCount') {
+                    element.textContent = current;
+                } else if (elementId === 'domainCount') {
+                    element.textContent = current + '+';
+                } else {
+                    element.textContent = current;
+                }
+
+                if (progress < 1) {
+                    requestAnimationFrame(update);
+                } else {
+                    if (elementId === 'doiCount') element.textContent = target;
+                    if (elementId === 'frameworkCount') element.textContent = target + '+';
+                    if (elementId === 'domainCount') element.textContent = target + '+';
+                    if (elementId === 'ecosystemCount') element.textContent = target;
+                }
+            }
+
+            requestAnimationFrame(update);
+        }
+
+        // Trigger counters when hero is visible
+        let countersStarted = false;
+        const heroObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting && !countersStarted) {
+                    countersStarted = true;
+                    setTimeout(() => {
+                        animateCounter('doiCount', 255, 2000);
+                        animateCounter('frameworkCount', 255, 2200);
+                        animateCounter('domainCount', 30, 1500);
+                        animateCounter('ecosystemCount', 4, 1000);
+                    }, 500);
+                }
+            });
+        }, { threshold: 0.3 });
+
+        heroObserver.observe(document.getElementById('hero'));
+
+        // ============ REVEAL ON SCROLL ============
+        const revealElements = document.querySelectorAll('.reveal');
+
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                    revealObserver.unobserve(entry.target);
+                }
+            });
+        }, {
+            threshold: 0.15,
+            rootMargin: '0px 0px -50px 0px'
+        });
+
+        revealElements.forEach(el => revealObserver.observe(el));
+
+        // ============ SMOOTH SCROLL FOR NAV LINKS ============
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
